@@ -1,0 +1,4 @@
+Python library to generate semiquandles, check their validity, and
+compare them for isomorphism.
+
+http://en.wikipedia.org/wiki/Biquandle
