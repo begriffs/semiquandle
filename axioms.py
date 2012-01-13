@@ -1,6 +1,8 @@
+import itertools
+
 # all n-tuples from elements of lst
 def ntuples(lst, n):
-    return zip(*[lst[i:]+lst[:i] for i in range(n)])
+    return list(itertools.product(lst, repeat=n))
 
 def forallTuples(X, u, d, axiom, n):
 	for t in ntuples(X, n):
