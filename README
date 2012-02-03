@@ -1,4 +1,6 @@
-Python library to generate semiquandles, check their validity, and
-compare them for isomorphism.
-
+Files used in my efforts to classify all semiquandles.
 http://en.wikipedia.org/wiki/Biquandle
+
+Model finding with Mace4.
+http://www.cs.unm.edu/~mccune/mace4/
+
