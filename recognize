@@ -1,0 +1,16 @@
+#!/bin/bash
+
+list=$1
+stranger=`cat $2`
+n=`./count ${list}`
+
+for (( c=1; c<=n; c++ ))
+do
+	friend=`./nth ${list} ${c}`
+	success=`echo "${friend} ${stranger}" | isofilter | grep "kept=1"`
+	if [ "$success" != "" ]
+	then
+		echo "$c"
+		break
+	fi
+done
