@@ -1,0 +1,6 @@
+interpretation( 2, [number = 1,seconds = 0], [
+    function(d(_,_), [0,0,1,1]),
+    function(u(_,_), [0,0,1,1])]).
+interpretation( 2, [number = 2,seconds = 0], [
+    function(d(_,_), [1,1,0,0]),
+    function(u(_,_), [1,1,0,0])]).
