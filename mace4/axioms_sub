@@ -1,0 +1,5 @@
+#!/bin/bash
+n=$(( $1 - 1 ))
+cat axioms.mace;
+echo "all a all b ((a != $n & b != $n) -> (a u b != $n & a d b != $n))."
+echo "end_of_list."

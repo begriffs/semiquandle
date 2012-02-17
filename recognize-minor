@@ -1,0 +1,15 @@
+#!/bin/bash
+
+little=`cat - | ./table`
+bigs=$1
+size=$2
+n=`cat $1 | ./count`
+
+for (( c=1; c<=n; c++ ))
+do
+	big=`./nth ${bigs} ${c} | ./trim $size`
+	if [ "$big" == "$little" ]
+	then
+		echo "$c"
+	fi
+done

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+strangers=$1
+friends=$2
+size=$3
+n=`./count < ${strangers}`
+
+for (( c=1; c<=n; c++ ))
+do
+	./nth $strangers $c | ./recognize-minor $friends $size | xargs -n 1 echo $c
+done
