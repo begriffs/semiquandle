@@ -4,3 +4,7 @@ http://en.wikipedia.org/wiki/Biquandle
 Model finding with Mace4.
 http://www.cs.unm.edu/~mccune/mace4/
 
+Note to self:
+./mass-recognize catalogue/5.sub catalogue/5.all > aka-5
+./mass-recognize-minor catalogue/4.all catalogue/5.sub 5 > contains-5-4
+join -1 2 -2 1 contains-5-4 aka-5 | cut -f 2-3 -d ' ' > embeds-4-5
