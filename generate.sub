@@ -1,3 +1,0 @@
-mace4/axioms_sub $1 > axioms.tmp
-mace4 -n $1 -N $1 -m -1 < axioms.tmp | interpformat standard output "u d" > catalogue/$1.sub
-rm axioms.tmp

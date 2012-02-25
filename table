@@ -1,1 +1,0 @@
-cat - | interpformat raw | grep -P "(  \d)" | sed "s/  /\t/g" | sed "s/^\t//"

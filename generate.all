@@ -1,1 +1,0 @@
-mace4 -n $1 -N $1 -m -1 < mace4/axioms.mace | interpformat standard | isofilter2 | interpformat standard output "u d" > catalogue/$1.all

@@ -25,6 +25,3 @@ all a all b all c ((a d b) u (c d (b u a)) = (a u c) d (b u (c d a))). % ax7
 
 all a all b all c ((a d (b u c)) d (c d b) = (a d c) d b). % ax8
 
-%all a all b ((a != 0 & b != 0) -> (a u b != 0 & a d b != 0)). % To find subsemiquandles of size n-1 embedded in the lower right.
-%all a all b ((a != 1 & b != 1) -> (a u b != 1 & a d b != 1)). % To find subsemiquandles of size n-2 embedded in the lower right.
-
