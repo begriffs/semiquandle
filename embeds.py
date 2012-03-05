@@ -1,18 +1,11 @@
 #!/usr/bin/python
 
+import ladr-python
 import itertools
-import numpy
-import math
 import sys
-import re
-import string
 
 def injections(M, N):
   return itertools.permutations(range(N), M)
-
-def op(ar):
-  edge = round(math.sqrt(len(ar)))
-  return numpy.reshape(ar, [edge, edge])
 
 def is_homom(f, opmatch):
   for (l, r) in opmatch:
@@ -31,20 +24,12 @@ def embeds(opmatch):
   except StopIteration: return False
   else: return True
 
-def opsInFile(f):
-  while f.readline():
-    m = re.search('\[([^\]]+?)\]', f.readline())
-    op1 = op(map(string.atoi, string.split(m.group(1), ',')))
-    m = re.search('\[([^\]]+?)\]', f.readline())
-    op2 = op(map(string.atoi, string.split(m.group(1), ',')))
-    yield (op1, op2)
-
 
 ######################################################################
 
 
 if len(sys.argv) < 3:
-  sys.exit('Usage: %s smalls bigs' % sys.argv[0])
+  sys.exit('Usage: %s smalls bigs small_prefix big_prefix' % sys.argv[0])
 
 (pref1, pref2) = (sys.argv[3], sys.argv[4])
 
@@ -59,3 +44,4 @@ for (sd, su) in smalls:
     j += 1
     if embeds([ (sd, bd), (su, bu) ]):
       print "\t\"%s_%i\" -> \"%s_%i\";" % (pref1, i, pref2, j)
+
