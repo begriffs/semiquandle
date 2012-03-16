@@ -11,7 +11,7 @@ def surjections(M, N):
     raise "Range too big to create a surjection"
   return itertools.ifilter(
       lambda f: len(set(f)) == N,
-      itertools.combinations_with_replacement(range(N), M))
+      itertools.product(range(N), repeat=M))
 
 def is_homom(f, opmatch):
   for (l, r) in opmatch:
