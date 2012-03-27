@@ -7,10 +7,10 @@ op(400,infix,"d").
 
 formulas(assumptions).
 
-all a all b exists c ( a = c u b). % Existence, ax1
+%all a all b exists c ( a = c u b). % Existence, ax1
 all b all c all x (c u b = x u b -> c = x). % Uniqueness, ax1
 
-all a all b exists c ( a = c d b). % Existence, ax2
+%all a all b exists c ( a = c d b). % Existence, ax2
 all b all c all x (c d b = x d b -> c = x). % Uniqueness, ax2
 
 all a all b (a d b = b <-> b u a = a). % ax3

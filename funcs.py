@@ -39,3 +39,18 @@ def mapsonto(opmatch):
   try: epimorphisms(opmatch).next()
   except StopIteration: return False
   else: return True
+
+def cycles(perm):
+  remain = set(perm)
+  result = []
+  while len(remain) > 0:
+    n = remain.pop()
+    cycle = [n]
+    while True:
+      n = perm[n]
+      if n not in remain:
+        break
+      remain.remove(n)
+      cycle.append(n)
+    result.append(cycle)
+  return result
