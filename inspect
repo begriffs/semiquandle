@@ -1,0 +1,17 @@
+#/bin/bash
+
+echo "CONGRUENCES" > aaaa
+echo "===========" >> aaaa
+echo >> aaaa
+./nth $1 $2 | ./find_congruences.py >> aaaa
+
+echo "CYCLES" > bbbb
+echo "======" >> bbbb
+echo >> bbbb
+./nth $1 $2 | ./cycles.py >> bbbb
+
+./nth $1 $2 | interpformat tabular | grep "^ " > cccc
+
+paste -d "\t" cccc aaaa bbbb | expand -t 30
+echo
+rm aaaa bbbb cccc

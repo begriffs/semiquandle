@@ -10,7 +10,7 @@ up_cols   = [funcs.cycles(p) for p in zip(*up_table)]
 
 print "------ up ------"
 for c in up_cols:
-  print c
+  print "   ".join(map(lambda(s): str(list(s)),  c))
 print "------ down ------"
 for c in down_cols:
-  print c
+  print "   ".join(map(lambda(s): str(list(s)),  c))
