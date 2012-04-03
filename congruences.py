@@ -23,20 +23,16 @@ def join_blocks(r, s, V):
     V[s] = -(nr + ns)
 
 def principal_congruence(a, b, op):
-  V = [-1]*len(op)
-  if a == b:
-    return V
-  V[b] = a
-  V[a] = -2
+  n = len(op)
+  V = [-1]*n
   pairs = [(a,b)]
   while len(pairs) > 0:
     (x, y) = pairs.pop(0)
-    range_roots = set([
-      root(op[x,x],V), root(op[x,y],V), root(op[y,x],V), root(op[y,y],V)])
-    if len(range_roots) > 1:
-      (r, s) = (range_roots.pop(), range_roots.pop())
+    (r, s) = (root(x, V), root(y, V))
+    if r != s:
       join_blocks(r, s, V)
-      pairs += [(a,b), (r,s)]
+      pairs += [ (op[r,z], op[s,z]) for z in range(n) ]
+      pairs += [ (op[z,r], op[z,s]) for z in range(n) ]
   print "principal(%i,%i)" % (a, b)
   print V
   print
