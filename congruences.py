@@ -4,6 +4,47 @@ import ladr_python
 import itertools
 import sys
 
+def root(i, V):
+  j = V[i]
+  if j < 0:
+    return i
+  else:
+    r = root(j, V)
+    V[i] = r # collapse tree for later
+    return r
+
+def join_blocks(r, s, V):
+  (nr, ns) = (-V[r], -V[s])
+  if nr >= ns:
+    V[s] = r
+    V[r] = -(nr + ns)
+  else:
+    V[r] = s
+    V[s] = -(nr + ns)
+
+def principal_congruence(a, b, op):
+  V = [-1]*len(op)
+  if a == b:
+    return V
+  V[b] = a
+  V[a] = -2
+  pairs = [(a,b)]
+  while len(pairs) > 0:
+    (x, y) = pairs.pop(0)
+    range_roots = set([
+      root(op[x,x],V), root(op[x,y],V), root(op[y,x],V), root(op[y,y],V)])
+    if len(range_roots) > 1:
+      (r, s) = (range_roots.pop(), range_roots.pop())
+      join_blocks(r, s, V)
+      pairs += [(a,b), (r,s)]
+  print "principal(%i,%i)" % (a, b)
+  print V
+  print
+  return V
+
+def is_trivial(cong):
+  return len([x for x in cong if x < 0]) in [1, len(cong)]
+
 def partitions(set_):
 	if not set_:
 		yield []
