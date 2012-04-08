@@ -1,0 +1,61 @@
+\documentclass{amsart}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[thm]{Definition}
+\newtheorem{example}[thm]{Example}
+\numberwithin{equation}{section}
+
+
+\begin{document}
+
+
+\title{Classification of Finite Symmetric Biquandles}
+
+\author{Joe Nelson}
+\email{joe@begriffs.com}
+\urladdr{https://github.com/begriffs/semiquandle}
+\author{Scott Pellicane}
+\email{second@math.sc.edu}
+
+
+\begin{abstract}
+The goal is to classify finite symmetric biquandles, or semiquandles, first defined in [1].
+
+We present an infinite class of simple semiquandles of prime order.
+\end{abstract}
+
+\maketitle
+
+%\tableofcontents
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Simple Semiquandles}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thm}
+Let $p$ be prime and let $\phi$ be a p-cycle in the symmetric group $S_p$.
+Then the semiquandle $C(\phi)$ is simple.
+\end{thm}
+\begin{proof}
+Let $\Theta$ be a congruence on $C(\phi)$. Suppose $\Theta$ has a class with
+at least two elements, $a$ and $b$. We will show that this class is all of
+$C(\phi)$, and hence that $\Theta$ is trivial.
+
+Since $\phi$ is a cycle, $b = \phi^{i}(a)$ for some $i$; hence
+$\phi^{i}(a) \equiv \phi^{0}(a)$. Since $\Theta$ is a congruence $\phi^{i}(a) =
+\phi^{i}(\phi^{0}(a)) \equiv \phi^{i}(\phi^{i}(a)) = \phi^{2i}(a)$. By transitivity,
+$a \equiv \phi^{2i}(a)$. Repeating the process gives $a \equiv \phi^{ni}(a)$ for any $n$.
+
+If $c$ is an arbitrary element of $C(\phi)$, then $c = \phi^{j}(a)$ for some $j$.
+Since the $\phi$ has prime order in $S_p$, there exists an $n$ with
+$\phi^{j} = \phi^{ni}$ so $a \equiv \phi^{ni}(a) = c$.
+\end{proof}
+
+
+%\subsection{Things that need to be done.}
+
+\end{document}
