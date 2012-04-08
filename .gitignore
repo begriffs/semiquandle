@@ -1,2 +1,5 @@
 __pycache__
 *.pyc
+results/paper.aux
+results/paper.log
+results/paper.toc
