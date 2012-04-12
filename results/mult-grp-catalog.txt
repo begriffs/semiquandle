@@ -1,4 +1,4 @@
-Q #up #dn #all
+Q	#up	#dn	#all
 A_1	1	1	1
 A_2	2	2	2
 B_1	1	1	1

@@ -54,3 +54,9 @@ def cycles(perm):
       cycle.append(n)
     result.append(cycle)
   return result
+
+def compose(a, b):
+  c = [0] * len(a)
+  for i in range(len(a)):
+    c[i] = b[a[i]]
+  return tuple(c)
