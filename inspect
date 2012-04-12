@@ -12,6 +12,5 @@ echo >> bbbb
 
 ./nth $1 $2 | interpformat tabular | grep "^ " > cccc
 
-paste -d "\t" cccc aaaa bbbb | expand -t 30
-echo
+pr -w 110 -tFm aaaa bbbb cccc
 rm aaaa bbbb cccc
