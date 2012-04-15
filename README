@@ -3,7 +3,7 @@ semiquandles.  http://en.wikipedia.org/wiki/Biquandle
 
 The results/ folder contains a PDF chart of the operation tables of
 small semiquandles and graphs of the way various sizes embed in one
-another.
+another. It also contains a paper with our theorems-in-progress.
 
 The catalogue/ folder contains lists of all semiquandles from size
 2-8 up to isomorphism. They are in the LADR format used by the Prover9
