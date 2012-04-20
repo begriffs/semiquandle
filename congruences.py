@@ -22,20 +22,22 @@ def join_blocks(r, s, V):
     V[r] = s
     V[s] = -(nr + ns)
 
-def principal_congruence(a, b, op):
-  n = len(op)
+def principal_congruence(a, b, ops):
+  n = len(ops[0])
   V = [-1]*n
+  join_blocks(a, b, V)
   pairs = [(a,b)]
-  while len(pairs) > 0:
+  while pairs:
     (x, y) = pairs.pop(0)
-    (r, s) = (root(x, V), root(y, V))
-    if r != s:
-      join_blocks(r, s, V)
-      pairs += [ (op[r,z], op[s,z]) for z in range(n) ]
-      pairs += [ (op[z,r], op[z,s]) for z in range(n) ]
-  print "principal(%i,%i)" % (a, b)
-  print V
-  print
+    for op in ops:
+      for z in range(n):
+        (r, s) = ( root(op[x,z], V), root(op[y,z], V) )
+        if r != s:
+          join_blocks(r, s, V)
+          pairs += [(r,s)]
+  # print "principal(%i,%i)" % (a, b)
+  # print V
+  # print
   return V
 
 def is_trivial(cong):
