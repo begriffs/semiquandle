@@ -1,0 +1,93 @@
+   Name     P  C   Mu     Mw
+*  A_1      C  2   1      1
+*  A_2      C  2   Z2     Z2
+   B_1      C  5   1      1
+   B_2         3   Z2     Z2
+   B_3         3   Z2     Z2
+   B_4      C  3   Z2     Z2
+*  B_5      C  2   Z3     Z3
+   C_1      C  15  1      1
+   C_2         6   Z2     Z2
+   C_3         3   Z3     Z3
+   C_4         7   Z2     Z2
+   C_5         7   Z2     Z2
+   C_6         4   Z2xZ2  Z2xZ2
+   C_7         5   Z2     Z2
+   C_8         6   Z2     Z2
+   C_9         5   Z2xZ2  Z2xZ2
+   C_10     C  7   Z2     Z2
+   C_11        5   Z2xZ2  Z2xZ2
+   C_12        3   Z3     Z3
+*  C_13     L  2   D8     S4
+*  C_21     L  2   D8     S4
+   D_1      C  52  1      1
+   D_2      C  17  Z2     Z2
+   D_3         6   Z3     Z3
+   D_4         10  Z2     Z2
+   D_5         4   Z4     Z4
+   D_6         17  Z2     Z2
+   D_7         7   Z3     Z3
+   D_8         6   Z3     Z3
+   D_9         20  Z2     Z2
+   D_10        8   Z2xZ2  Z2xZ2
+   D_11        9   Z2     Z2
+   D_12        4   (6)F   (6)F
+   D_13        5   Z6     Z6
+   D_14        8   Z2xZ2  Z2xZ2
+   D_15        17  Z2     Z2
+   D_16        8   Z2xZ2  Z2xZ2
+   D_17        8   Z2xZ2  Z2XZ2
+   D_18        17  Z2     Z2
+   D_19        8   Z2xZ2  Z2xZ2
+   D_20        20  Z2     Z2
+   D_21        9   Z2xZ2  Z2xZ2
+   D_22        5   Z6     Z6
+   D_23     C  20  Z2     Z2
+   D_24        9   Z2xZ2  Z2xZ2
+   D_25        5   Z6     Z6
+   D_26        9   Z2xZ2  Z2xZ2
+   D_27        9   Z2xZ2  Z2xZ2
+   D_28        9   Z2xZ2  Z2xZ2
+   D_29        10  Z2xZ2  Z2xZ2
+   D_30        8   Z2xZ2  Z2xZ2
+   D_31        9   Z2     Z2
+   D_32        8   Z2xZ2  Z2xZ2
+   D_33        9   Z2xZ2  Z2xZ2
+   D_34        10  Z2xZ2  Z2xZ2
+   D_35        9   Z2xZ2  Z2xZ2
+   D_36        10  Z2xZ2  Z2xZ2
+   D_37        4   (8)F   (8)F
+   D_38        4   (8)F   (8)F
+   D_39        7   Z3     Z3
+   D_40        5   Z6     Z6
+   D_41        3   D8     S4
+   D_42        6   Z3     Z3
+   D_43        6   Z3     Z3
+   D_44        7   Z3     Z3
+   D_45        5   Z6     Z6
+   D_60        3   D8     S4
+   D_63        3   D8     S4
+   D_69        3   D8     S4
+*  D_88     C  2   Z5     Z5
+   E_7         3   Z5     Z5
+   E_440       3   Z5     Z5
+   E_460       3   Z5     Z5
+*  F_3456   C  2   Z7     Z7
+*  G_23669     2          S8
+*  G_29480     2
+*  G_29481     2
+*  G_29482     2
+*  G_32695     2
+*  G_33755     2
+*  G_34276     2
+*  G_34348     2
+*  G_34350     2
+*  G_34351     2
+*  G_34353     2
+*  G_34357     2
+*  G_34363     2
+*  G_34364     2
+*  G_34369     2
+*  G_34371     2
+*  G_34497     2
+*  G_34506     2
