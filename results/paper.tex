@@ -31,7 +31,9 @@ We present an infinite class of simple semiquandles of prime order.
 \section{Definition of a Semiquandle}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-A \emph{semiquandle} is a system $(X,\nearrow,\searrow)$ such that $X$ is a nonempty set and $\uparrow$ and $\downarrow$ are binary functions on $X$ satisfying:
+A \emph{semiquandle} (as defined in \cite{aH10}) is a system
+$(X,\nearrow,\searrow)$ such that $X$ is a nonempty set and $\nearrow$
+and $\searrow$ are binary functions on $X$ satisfying:
 
 \begin{enumerate}
 \item $\exists!{c}$ $(a = c^b)$,
@@ -43,7 +45,19 @@ A \emph{semiquandle} is a system $(X,\nearrow,\searrow)$ such that $X$ is a none
 \item $(a_b)_c = (a_{c^b})_{b_c}$,
 \item $(a_b)^{c_{b^a}} = (a^c)_{b^{c_a}}$,
 \end{enumerate}
-where the free variables in (1-8) are universally quantified. A \emph{Latin semiquandle} is a semiquandle satisfying $\forall{ab}$ $\exists!{c}$ $(a=b^c)$ and $\forall{ab}$ $\exists!{c}$ $(a=b_c)$. See \cite{aH10} for where the definition first appeared.
+where the free variables in (1-8) are universally quantified. A
+\emph{Latin semiquandle} additionally satisfies $\forall{ab}$
+$\exists!{c}$ $(a=b^c)$ and $\forall{ab}$ $\exists!{c}$ $(a=b_c)$.
+
+The definition can be simplified.
+
+\begin{lem}
+Axioms 1, 2, 4, and 6 imply the rest.
+\end{lem}
+
+\begin{proof}
+Proofproofproofproofproof
+\end{proof}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -53,31 +67,18 @@ where the free variables in (1-8) are universally quantified. A \emph{Latin semi
 \subsection{Semiquandles of Constant Action}
 
 \begin{thm}
-Let $\varphi \in S_n$. The operations given by $a^{b} = \varphi(a)$ and $a_b = \varphi^{-1}(a)$ form
-a semiquandle on $\{0, 1, \ldots, n-1\}$ which we denote by $C(\varphi)$.
+Let $\varphi \in S_n$. The operations given by $a^{b} = \varphi(a)$
+and $a_b = \varphi^{-1}(a)$ form a semiquandle on $\{0, 1, \ldots,
+n-1\}$ which we denote by $C(\varphi)$.
 \end{thm}
 
 \begin{proof}
-We go through the axioms in turn.
+  Axioms (1) and (2) hold because the operations come from bijections.
 
-For (1): Given 
+For (4): $(a_b)^{(b^a)} = \phi(a_b) = \phi \phi^{-1}(a) = a$.
 
-For (2):
+For (6): $(a^b)^c = \phi^{2}(a) = (a^{c_b})^{b^c}$.
 
-For (3):
-
-For (4):
-
-For (5):
-
-For (6):
-
-For (7):
-
-For (8):
-
-
-Note that this appeared in \cite{aH10} without proof.
 \end{proof}
 
 \begin{definition}
@@ -134,8 +135,8 @@ So both or neither of $\varphi(a)$, $\varphi(b)$ equal $x$, making $\varphi(a) \
 Hence the partition is a nontrivial congruence.
 \end{proof}
 
-The following shows the source of all simple semiquandles of constant action: permutations
-which generate simple groups and which fix nothing.
+All simple semiquandles of constant action come from permutations
+which generate simple groups and fix nothing.
 
 \begin{thm}
 Let $p$ be prime and let $\varphi$ be a p-cycle in the symmetric group $S_p$.
@@ -143,18 +144,22 @@ Then $C(\varphi)$ is simple.
 \end{thm}
 
 \begin{proof}
-Let $\Theta$ be a congruence on $C(\varphi)$. Suppose $\Theta$ has a class with
-at least two elements, $a$ and $b$. We will show that this class is all of
-$C(\varphi)$, and hence that $\Theta$ is trivial.
+Let $\Theta$ be a congruence on $C(\varphi)$. Suppose $\Theta$ has
+a class with at least two elements, $a$ and $b$. We will show that
+this class is all of $C(\varphi)$, and hence that $\Theta$ is
+trivial.
 
 Since $\varphi$ is a cycle, $b = \varphi^{i}(a)$ for some $i$; hence
-$\varphi^{i}(a) \equiv \varphi^{0}(a)$. Since $\Theta$ is a congruence $\varphi^{i}(a) =
-\varphi^{i}(\varphi^{0}(a)) \equiv \varphi^{i}(\varphi^{i}(a)) = \varphi^{2i}(a)$. By transitivity,
-$a \equiv \varphi^{2i}(a)$. Repeating the process gives $a \equiv \varphi^{ni}(a)$ for any $n$.
+$\varphi^{i}(a) \equiv \varphi^{0}(a)$. Since $\Theta$ is a congruence
+$\varphi^{i}(a) = \varphi^{i}(\varphi^{0}(a)) \equiv
+\varphi^{i}(\varphi^{i}(a)) = \varphi^{2i}(a)$. By transitivity,
+$a \equiv \varphi^{2i}(a)$. Repeating the process gives $a \equiv
+\varphi^{ni}(a)$ for any $n$.
 
-If $c$ is an arbitrary element of $C(\varphi)$, then $c = \varphi^{j}(a)$ for some $j$.
-Since the $\varphi$ has prime order in $S_p$, there exists an $n$ with
-$\varphi^{j} = \varphi^{ni}$ so $a \equiv \varphi^{ni}(a) = c$.
+If $c$ is an arbitrary element of $C(\varphi)$, then $c = \varphi^{j}(a)$
+for some $j$.  Since the $\varphi$ has prime order in $S_p$, there
+exists an $n$ with $\varphi^{j} = \varphi^{ni}$ so $a \equiv
+\varphi^{ni}(a) = c$.
 \end{proof}
 
 \subsection{Latin Semiquandles}
