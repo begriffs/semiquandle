@@ -45,11 +45,9 @@ and $\searrow$ are binary functions on $X$ satisfying:
 \item $(a_b)_c = (a_{c^b})_{b_c}$,
 \item $(a_b)^{c_{b^a}} = (a^c)_{b^{c_a}}$,
 \end{enumerate}
-where the free variables in (1-8) are universally quantified. A
-\emph{Latin semiquandle} additionally satisfies $\forall{ab}$
-$\exists!{c}$ $(a=b^c)$ and $\forall{ab}$ $\exists!{c}$ $(a=b_c)$.
 
-The definition can be simplified.
+where the free variables in (1-8) are universally quantified. The
+definition can be simplified.
 
 \begin{lem}
 Axioms 1, 2, 4, and 6 imply the rest.
@@ -78,69 +76,87 @@ n-1\}$ which we denote by $C(\varphi)$.
 For (4): $(a_b)^{(b^a)} = \phi(a_b) = \phi \phi^{-1}(a) = a$.
 
 For (6): $(a^b)^c = \phi^{2}(a) = (a^{c_b})^{b^c}$.
-
 \end{proof}
 
 \begin{definition}
-A semiquandle is \emph{of constant action} if it equals $C(\varphi)$ for some $\varphi$.
+A semiquandle is \emph{of constant action} if it equals $C(\varphi)$
+for some $\varphi$.
 \end{definition}
 
 \begin{thm}
-All semiquandles smaller than size three are simple and of constant action.
+All semiquandles smaller than size three are simple and of constant
+action.
 \end{thm}
 
 \begin{proof}
-Computer exhaustion reveals there are three semiquandles (up to isomorphism) smaller than
-size three. They are of constant action. There is no way to partition a set of size one or two
-other than trivially, so the semiquandles are simple.
+Computer exhaustion reveals there are three semiquandles (up to
+isomorphism) smaller than size three. They are of constant action.
+There is no way to partition a set of size one or two other than
+trivially, so the semiquandles are simple.
 \end{proof}
 
-We can relate properties of the group $\langle\varphi\rangle$ to those of the semiquandle $C(\varphi)$.
-The following theorem establishes that non-simplicity begets non-simplicity.
+We can relate properties of the group $\langle\varphi\rangle$ to
+those of the semiquandle $C(\varphi)$.  The following theorem
+establishes that non-simplicity begets non-simplicity.
 
 \begin{thm}
-Let $\varphi \in S_n$. If $N \lhd \langle\varphi\rangle$ then there is a congruence on
-$C(\varphi)$ having $\left|\langle\varphi\rangle : N\right|$ classes.
+Let $\varphi \in S_n$. If $N \lhd \langle\varphi\rangle$ then there
+is a congruence on $C(\varphi)$ having $\left|\langle\varphi\rangle
+: N\right|$ classes.
 \end{thm}
 
 \begin{proof}
-Define a relation $\sim$ on $C(\varphi)$ by $\varphi^{i}(0) \sim \varphi^{j}(0)$ iff the cosets $N\varphi^{i} = N\varphi^{j}$. $\sim$ is an equivalence relation. Now suppose some $\varphi^{i}(0) \sim \varphi^{j}(0)$. Then by normality $N\varphi^{i+1} = N\varphi^{i}N\varphi = N\varphi^{j}N\varphi = N\varphi^{j+1}$. Hence $a \sim b$ implies $\varphi(a) \sim \varphi(b)$ and $\varphi^{-1}(a) \sim \varphi^{-1}(b)$ for any $a$, $b \in C(\varphi)$. Thus $\sim$ is a congruence.
+Define a relation $\sim$ on $C(\varphi)$ by $\varphi^{i}(0) \sim
+\varphi^{j}(0)$ iff the cosets $N\varphi^{i} = N\varphi^{j}$. $\sim$
+is an equivalence relation. Now suppose some $\varphi^{i}(0) \sim
+\varphi^{j}(0)$. Then by normality $N\varphi^{i+1} = N\varphi^{i}N\varphi
+= N\varphi^{j}N\varphi = N\varphi^{j+1}$. Hence $a \sim b$ implies
+$\varphi(a) \sim \varphi(b)$ and $\varphi^{-1}(a) \sim \varphi^{-1}(b)$
+for any $a$, $b \in C(\varphi)$. Thus $\sim$ is a congruence.
 
 [TODO: why are the congruences distinct?]
 
 \bigskip
 
-Let $B_1$, $B_2$ be blocks of a partition $\theta \in Con(C(\varphi))$ such that $n > \left|B_1\right| > \left|B_2\right| > 1$. Goal: $\left|B_1\right| = \left|B_2\right|$.
+Let $B_1$, $B_2$ be blocks of a partition $\theta \in Con(C(\varphi))$
+such that $n > \left|B_1\right| > \left|B_2\right| > 1$. Goal:
+$\left|B_1\right| = \left|B_2\right|$.
 
 \bigskip
 
-First, if any block $B$ of $\theta$ is closed (as an element of the semiquandle quotient structure), then $B$ contains all elements of $C(\varphi))$: $\varphi^k(\varphi^i(0)) \in B$ for all $k$.
+First, if any block $B$ of $\theta$ is closed (as an element of the
+semiquandle quotient structure), then $B$ contains all elements of
+$C(\varphi))$: $\varphi^k(\varphi^i(0)) \in B$ for all $k$.
 
 \bigskip
 
 
 \end{proof}
 
-The other direction does not hold in general. Permutations which generate simple groups don't
-always induce simple semiquandles of constant action. Here is where the trouble occurs.
+The other direction does not hold in general. Permutations which
+generate simple groups don't always induce simple semiquandles of
+constant action. Here is where the trouble occurs.
 
 \begin{thm}
-If $\varphi \in S_{n > 2}$ fixes an element then $C(\varphi)$ is not simple.
+If $\varphi \in S_{n > 2}$ fixes an element then $C(\varphi)$ is
+not simple.
 \end{thm}
 
 \begin{proof}
-Suppose $\varphi$ fixes $x$ and consider the partition $\{ \{x\}, C(\varphi) \setminus \{x\} \}$.
-If $a \sim b$ under the induced equivalence relation then either both or neither equal $x$.
-So both or neither of $\varphi(a)$, $\varphi(b)$ equal $x$, making $\varphi(a) \sim \varphi(b)$.
-Hence the partition is a nontrivial congruence.
+Suppose $\varphi$ fixes $x$ and consider the partition $\{ \{x\},
+C(\varphi) \setminus \{x\} \}$.  If $a \sim b$ under the induced
+equivalence relation then either both or neither equal $x$.  So
+both or neither of $\varphi(a)$, $\varphi(b)$ equal $x$, making
+$\varphi(a) \sim \varphi(b)$.  Hence the partition is a nontrivial
+congruence.
 \end{proof}
 
 All simple semiquandles of constant action come from permutations
 which generate simple groups and fix nothing.
 
 \begin{thm}
-Let $p$ be prime and let $\varphi$ be a p-cycle in the symmetric group $S_p$.
-Then $C(\varphi)$ is simple.
+Let $p$ be prime and let $\varphi$ be a p-cycle in the symmetric
+group $S_p$.  Then $C(\varphi)$ is simple.
 \end{thm}
 
 \begin{proof}
@@ -159,11 +175,39 @@ $a \equiv \varphi^{2i}(a)$. Repeating the process gives $a \equiv
 If $c$ is an arbitrary element of $C(\varphi)$, then $c = \varphi^{j}(a)$
 for some $j$.  Since the $\varphi$ has prime order in $S_p$, there
 exists an $n$ with $\varphi^{j} = \varphi^{ni}$ so $a \equiv
-\varphi^{ni}(a) = c$.
-\end{proof}
+\varphi^{ni}(a) = c$.  \end{proof}
 
 \subsection{Latin Semiquandles}
 
+A \emph{Latin} semiquandle is one which additionally satisfies
+$\forall{ab}$ $\exists!{c}$ $(a=b^c)$ and $\forall{ab}$ $\exists!{c}$
+$(a=b_c)$. We write $b/a$ for the unique $c$ such that $a = b^{c}$.
+
+\begin{thm}
+The $\nearrow$ and $\searrow$ operations differ in a nontrivial
+Latin semiquandle.
+\end{thm}
+\begin{proof}
+Assume for contradiction that $a^{b} = a_b$ for all $a$ and $b$.
+Then Axioms 4 and 6 become $(x^y)^{(y^x)} = x$ and $(x^{(y^z)})^{(z^y)}
+= (x^z)^y$ respectively.
+
+We first show that this implies $y^{x}/x^{y} = x/y$. As a preliminary,
+notice that $x = (x^{x/y})^{(x/y)^{x}} = y^{(x/y)^{x}}$. Hence
+$(y^{x})^{y^{x}/x^{y}} = x^{y} = (y^{(x/y)^{x}})^{y} =
+(y^{(x/y)^{x}})^{x^{x/y}} = (y^{x})^{x/y}$. By cancellation of the
+$y^{x}$ base, $y^{x} / x^{y} = x/y$.
+
+Next we'll see that $(x/y)/(y/x) = x$. First, $y^{{(x/y)}^{x}} =
+(x^{x/y})^{{(x/y)}^{x}} = x = y^{y/x}$. By cancelling the $y$ base
+we get $(x/y)^{x} = y/x$ which itself equals $(x/y)^{(x/y)/(y/x)}$.
+Cancelling the $x/y$ base gives us the result.
+
+Combining these facts yields $y^{x} = (y^{x}/x^{y}) / (x^{y}/y^{x})
+= (x/y) / (y/x) = x$. However, if the semiquandle has two distinct
+elements $a \neq b$ then $a^{x} = x = b^{x}$, which contradicts the
+Latin condition.
+\end{proof}
 
 \begin{thebibliography}{9}
 
