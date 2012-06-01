@@ -18,7 +18,8 @@
 \author{Scott Pellicane}
 
 \begin{abstract}
-The goal is to classify finite symmetric biquandles, or semiquandles, first defined in \cite{aH10}.
+The goal is to classify finite symmetric biquandles, or semiquandles,
+first defined in \cite{aH10}.
 
 We present an infinite class of simple semiquandles of prime order.
 \end{abstract}
@@ -32,8 +33,8 @@ We present an infinite class of simple semiquandles of prime order.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 A \emph{semiquandle} (as defined in \cite{aH10}) is a system
-$(X,\nearrow,\searrow)$ such that $X$ is a nonempty set and $\nearrow$
-and $\searrow$ are binary functions on $X$ satisfying:
+$(Q,\nearrow,\searrow)$ such that $Q$ is a nonempty set and $\nearrow$
+and $\searrow$ are binary functions on $Q$ satisfying:
 
 \begin{enumerate}
 \item $\exists!{c}$ $(a = c^b)$,
@@ -45,13 +46,12 @@ and $\searrow$ are binary functions on $X$ satisfying:
 \item $(a_b)_c = (a_{c^b})_{b_c}$,
 \item $(a_b)^{c_{b^a}} = (a^c)_{b^{c_a}}$,
 \end{enumerate}
-
 where the free variables in (1-8) are universally quantified. The
 definition can be simplified.
 
-\begin{lem}
+\begin{thm}
 Axioms 1, 2, 4, and 6 imply the rest.
-\end{lem}
+\end{thm}
 
 \begin{proof}
 Proofproofproofproofproof
@@ -95,42 +95,29 @@ There is no way to partition a set of size one or two other than
 trivially, so the semiquandles are simple.
 \end{proof}
 
-We can relate properties of the group $\langle\varphi\rangle$ to
-those of the semiquandle $C(\varphi)$.  The following theorem
-establishes that non-simplicity begets non-simplicity.
+We can relate properties of the cyclic group $\langle\varphi\rangle$
+to those of the semiquandle $C(\varphi)$.  The following theorem
+establishes that non-simplicity begets non-simplicity when $\varphi$
+is a cycle.
 
 \begin{thm}
-Let $\varphi \in S_n$. If $N \lhd \langle\varphi\rangle$ then there
-is a congruence on $C(\varphi)$ having $\left|\langle\varphi\rangle
-: N\right|$ classes.
+Let $\varphi$ be an $n$-cycle in $S_n$. If $N \lhd \langle\varphi\rangle$
+then there is a congruence on $C(\varphi)$ having
+$\left|\langle\varphi\rangle : N\right|$ classes.
 \end{thm}
 
 \begin{proof}
-Define a relation $\sim$ on $C(\varphi)$ by $\varphi^{i}(0) \sim
-\varphi^{j}(0)$ iff the cosets $N\varphi^{i} = N\varphi^{j}$. $\sim$
-is an equivalence relation. Now suppose some $\varphi^{i}(0) \sim
-\varphi^{j}(0)$. Then by normality $N\varphi^{i+1} = N\varphi^{i}N\varphi
-= N\varphi^{j}N\varphi = N\varphi^{j+1}$. Hence $a \sim b$ implies
+Since $C(\varphi)$ is nonempty $0 \in C(\varphi)$. Since $\varphi$
+is an $n$-cycle there is an $i,j$ such that $a = \varphi^{i}(0)$
+and $b = \varphi^{j}(0)$ for any $a,b \in C(\varphi)$.  So let
+$\sim$ be the relation on $C(\varphi)$ defined by $\varphi^{i}(0)
+\sim \varphi^{j}(0)$ iff the cosets $N\varphi^{i} = N\varphi^{j}$.
+First, $\sim$ is an equivalence relation by the properties of
+equality. Now suppose some $\varphi^{i}(0) \sim \varphi^{j}(0)$.
+Then by normality $N\varphi^{i+1} = N\varphi^{i}N\varphi =
+N\varphi^{j}N\varphi = N\varphi^{j+1}$. Hence $a \sim b$ implies
 $\varphi(a) \sim \varphi(b)$ and $\varphi^{-1}(a) \sim \varphi^{-1}(b)$
 for any $a$, $b \in C(\varphi)$. Thus $\sim$ is a congruence.
-
-[TODO: why are the congruences distinct?]
-
-\bigskip
-
-Let $B_1$, $B_2$ be blocks of a partition $\theta \in Con(C(\varphi))$
-such that $n > \left|B_1\right| > \left|B_2\right| > 1$. Goal:
-$\left|B_1\right| = \left|B_2\right|$.
-
-\bigskip
-
-First, if any block $B$ of $\theta$ is closed (as an element of the
-semiquandle quotient structure), then $B$ contains all elements of
-$C(\varphi))$: $\varphi^k(\varphi^i(0)) \in B$ for all $k$.
-
-\bigskip
-
-
 \end{proof}
 
 The other direction does not hold in general. Permutations which
@@ -214,6 +201,8 @@ Latin condition.
    \bibitem{aH10}
       A. Henrich and S. Nelson, \emph{Semiquandles and flat virtual
       knots}, Pacific J. Math. \textbf{248} (2010), no. 1, 155--170.
+   \bibitem{unotdP9}
+      W. McCune, ``Prover9 and Mace4'', http://www.cs.unm.edu/~mccune/Prover9, 2005-2010.
 
 \end{thebibliography}
 
